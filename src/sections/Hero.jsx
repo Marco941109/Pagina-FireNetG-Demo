@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import ParticlesBg from "../components/ParticlesBg";
 
-// TUS IMÁGENES .PNG
+// TUS IMÁGENES .PNG / .JPEG
 import img1 from "../assets/fiber1.png";
 import img2 from "../assets/fiber2.png";
 import img3 from "../assets/fiber3.png";
@@ -61,8 +61,8 @@ const Hero = () => {
           />
         </AnimatePresence>
 
-        {/* 2. CAPA DE CONTRASTE PROFESIONAL (OVERLAY) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-900/60 to-slate-950 z-10 backdrop-blur-[1px]"></div>
+        {/* 2. CAPA DE CONTRASTE REFINADA (Fondo claro para que luzcan tus fotos) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-900/20 to-slate-950/90 z-10 backdrop-blur-[0.5px]"></div>
 
         {/* LUCES AMBIENTALES NEÓN */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 blur-[140px] rounded-full z-10 pointer-events-none animate-pulse"></div>
@@ -83,12 +83,27 @@ const Hero = () => {
           transition={{ duration: 1 }}
         >
           <div className="relative flex flex-col md:flex-row items-center gap-6 md:gap-12">
-            {/* TEXTOS PRINCIPALES */}
-            <div className="flex flex-col items-center md:items-start text-center md:text-left">
-              <h1 className="text-6xl md:text-[90px] font-black tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-cyan-400 drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]">
+            {/* TEXTOS PRINCIPALES CON ESTILO UNIFICADO Y MÁXIMA CLARIDAD */}
+            <div className="flex flex-col items-center md:items-start text-center md:text-left selection:bg-cyan-500/30">
+              {/* TÍTULO PRINCIPAL: FiberNetG (Efecto limpio a juego con los botones) */}
+              <h1
+                className="text-6xl md:text-[95px] font-black tracking-tight leading-none text-white font-sans"
+                style={{
+                  filter:
+                    "drop-shadow(0 0 15px rgba(34,211,238,0.6)) drop-shadow(0 4px 12px rgba(0,0,0,0.9))",
+                }}
+              >
                 FiberNetG
               </h1>
-              <h2 className="text-xl md:text-3xl font-bold tracking-[0.2em] mt-3 uppercase text-cyan-400/90 drop-shadow-[0_2px_10px_rgba(6,182,212,0.5)]">
+
+              {/* SUBTÍTULO: WIRELESS & FIBRA ÓPTICA (Mismo efecto tipográfico elegante) */}
+              <h2
+                className="text-xl md:text-[34px] font-black tracking-[0.1em] mt-4 uppercase text-white font-sans"
+                style={{
+                  filter:
+                    "drop-shadow(0 0 10px rgba(34,211,238,0.5)) drop-shadow(0 3px 8px rgba(0,0,0,0.9))",
+                }}
+              >
                 Wireless & Fibra óptica
               </h2>
             </div>
@@ -108,9 +123,9 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* DESCRIPCIÓN REFINADA */}
+        {/* DESCRIPCIÓN REFINADA CON TARJETA DE CRISTAL OSCURECIDA INDEPENDIENTE */}
         <motion.p
-          className="text-slate-300/90 text-base md:text-xl max-w-3xl mb-12 leading-relaxed font-light tracking-wide drop-shadow-md"
+          className="text-white text-base md:text-xl max-w-3xl mb-12 leading-relaxed font-medium tracking-wide drop-shadow-md bg-slate-950/40 px-6 py-4 rounded-2xl border border-white/5 backdrop-blur-md"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 1 }}
@@ -120,22 +135,25 @@ const Hero = () => {
           hogar y empresa con tecnología de vanguardia.
         </motion.p>
 
-        {/* BOTONES GEMELOS SIMÉTRICOS */}
+        {/* BOTONES GEMELOS SIMÉTRICOS CON EFECTO HOVER DINÁMICO */}
         <motion.div
           className="flex flex-col sm:flex-row gap-5 justify-center items-center z-40"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.8 }}
         >
+          {/* BOTÓN: VER PLANES */}
           <a
             href="#planes"
-            className="w-56 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-bold uppercase tracking-widest transition-all duration-300 shadow-[0_10px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_15px_30px_rgba(37,99,235,0.5)] hover:-translate-y-1 text-center"
+            className="w-56 py-4 border-2 border-white/20 hover:border-blue-600 bg-white/5 hover:bg-blue-600 text-white rounded-full font-bold uppercase tracking-widest transition-all duration-300 backdrop-blur-md hover:-translate-y-1 text-center shadow-lg hover:shadow-[0_15px_30px_rgba(37,99,235,0.4)]"
           >
             Ver Planes
           </a>
+
+          {/* BOTÓN: CONTRATAR AQUÍ */}
           <a
             href="#contacto"
-            className="w-56 py-4 border-2 border-white/20 hover:border-cyan-400 bg-white/5 hover:bg-cyan-400/10 text-white hover:text-cyan-400 rounded-full font-bold uppercase tracking-widest transition-all duration-300 backdrop-blur-md hover:-translate-y-1 text-center"
+            className="w-56 py-4 border-2 border-white/20 hover:border-blue-600 bg-white/5 hover:bg-blue-600 text-white rounded-full font-bold uppercase tracking-widest transition-all duration-300 backdrop-blur-md hover:-translate-y-1 text-center shadow-lg hover:shadow-[0_15px_30px_rgba(37,99,235,0.4)]"
           >
             Contratar Aquí
           </a>

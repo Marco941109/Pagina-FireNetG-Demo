@@ -120,7 +120,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* COLUMNA 3: CONTACTO DIRECTO */}
+          {/* COLUMNA 3: CONTACTO DIRECTO DE LA EMPRESA */}
           <div className="lg:col-span-4 space-y-4">
             <h4 className="text-[10px] uppercase font-bold tracking-widest text-slate-200 font-mono">
               Atención Directa
@@ -128,18 +128,20 @@ const Footer = () => {
             <ul className="space-y-3 text-xs md:text-sm">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-cyan-500 shrink-0 mt-0.5" />
-                <span className="text-slate-500">
-                  Oficina Central / Cobertura en la Región, México.
+                <span className="text-slate-400 font-sans leading-relaxed">
+                  AV 3A NORTE PONIENTE S/N <br />
+                  BARRIO SAN ANTONIO 29740 <br />
+                  RAYON, CHIS.
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-cyan-500 shrink-0" />
-                <span className="font-mono text-slate-300">919 129 6980</span>
+                <span className="font-mono text-slate-300">919 129 5980</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-cyan-500 shrink-0" />
                 <span className="font-mono text-slate-300 text-xs truncate">
-                  marcos.lopez.sanchez.dev@gmail.com
+                  fibernetg1@gmail.com
                 </span>
               </li>
             </ul>
@@ -169,7 +171,7 @@ const Footer = () => {
           <div className="select-none text-center sm:text-right">
             <span>Desarrollado con precisión por </span>
             <a
-              href="mailto:marcos.lopez.sanchez.dev@gmail.com"
+              href="mailto:marco941109@gmail.com"
               className="text-slate-400 hover:text-cyan-400 font-mono font-medium transition-colors no-underline"
             >
               MLS.Dev

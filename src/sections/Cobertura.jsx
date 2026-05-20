@@ -5,39 +5,32 @@ import ScrollReveal from "../components/ScrollReveal"; // Única importación a�
 
 const COBERTURA_DATA = [
   {
-    municipio: "Municipio Principal",
+    municipio: "Rayón, Chiapas",
     estado: "Cobertura Total",
     tipo: "Fibra Óptica + Wireless",
     zonas: [
-      "Zona Centro",
-      "Barrio Alto",
-      "Colonia El Mirador",
-      "Fraccionamiento Las Palmas",
-      "Sectores Comerciales",
+      "Barrio San Miguel",
+      "Barrio San Juan",
+      "Barrio Guadalupe",
+      "Barrio El Centro",
+      "Barrio Santa Cruz",
+      "Barrio San Antonio",
+      "Y comunidades aledañas...",
     ],
     activo: true,
   },
   {
-    municipio: "Municipio Vecino A",
-    estado: "Cobertura Parcial",
+    municipio: "Municipios Vecinos",
+    estado: "Cobertura Activa",
     tipo: "Enlace Wireless de Alta Capacidad",
-    zonas: [
-      "Casco Urbano",
-      "Zona Norte",
-      "Entrada Principal",
-      "Comunidades Aledañas",
-    ],
+    zonas: ["Pantepec", "Solosuchiapa", "Tapilula"],
     activo: true,
   },
   {
     municipio: "Próxima Expansión",
     estado: "Muy Pronto",
     tipo: "Despliegue de Infraestructura",
-    zonas: [
-      "Nuevos Municipios Cercanos",
-      "Zonas Rurales Interconectadas",
-      "Ampliación de Red Troncal",
-    ],
+    zonas: ["Ixhuatán", "Tapalapa"],
     activo: false,
   },
 ];
@@ -72,7 +65,7 @@ const Cobertura = () => {
               Disponibilidad de Red
             </span>
 
-            <p className="text-slate-400 max-w-2xl mx-auto font-light text-base md:text-lg mt-4">
+            <p className="text-slate-200 max-w-2xl mx-auto font-normal text-base md:text-lg mt-4">
               Estamos expandiendo nuestra infraestructura moderna para conectar
               a más hogares y negocios con la máxima estabilidad.
             </p>
@@ -151,7 +144,7 @@ const Cobertura = () => {
                   <h3 className="text-2xl font-bold text-white mb-1 text-left">
                     {item.municipio}
                   </h3>
-                  <p className="text-xs text-slate-500 font-mono mb-6 text-left">
+                  <p className="text-xs text-slate-400 font-mono mb-6 text-left">
                     {item.tipo}
                   </p>
 
@@ -166,7 +159,7 @@ const Cobertura = () => {
                       {item.zonas.map((zona, idx) => (
                         <li
                           key={idx}
-                          className="flex items-start gap-2.5 text-sm text-slate-300"
+                          className="flex items-start gap-2.5 text-sm text-slate-200"
                         >
                           {item.activo ? (
                             <CheckCircle2
@@ -179,7 +172,8 @@ const Cobertura = () => {
                               className="text-purple-400 shrink-0 mt-1 rotate-45"
                             />
                           )}
-                          <span className="font-light leading-tight">
+                          {/* Cambiado font-light por font-normal para mayor nitidez */}
+                          <span className="font-normal leading-tight">
                             {zona}
                           </span>
                         </li>
@@ -188,7 +182,7 @@ const Cobertura = () => {
                   </div>
 
                   {/* Indicador visual inferior */}
-                  <div className="w-full pt-4 border-t border-slate-800/60 text-center text-xs text-slate-500 font-medium tracking-wide">
+                  <div className="w-full pt-4 border-t border-slate-800/60 text-center text-xs text-slate-400 font-medium tracking-wide">
                     {item.activo
                       ? "Servicio Listo para Instalación"
                       : "Sujeto a mapa de ruta"}
@@ -214,7 +208,7 @@ const Cobertura = () => {
               <h4 className="text-lg font-bold text-white">
                 ¿No encuentras tu localidad?
               </h4>
-              <p className="text-sm text-slate-400 font-light mt-0.5">
+              <p className="text-sm text-slate-400 font-normal mt-0.5">
                 Envíanos tu ubicación exacta para realizar un estudio de
                 factibilidad técnica sin costo.
               </p>

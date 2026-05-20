@@ -5,46 +5,46 @@ import ScrollReveal from "../components/ScrollReveal";
 
 const PLANES_DATA = [
   {
-    nombre: "Plan Hogar",
-    velocidad: "50 Mbps",
-    precio: "$X / mes",
+    nombre: "Plan Básico",
+    velocidad: "15 MB",
+    precio: "$300 / mes",
     icono: <Wifi />,
     detalles: [
-      "Fibra Óptica Simétrica",
-      "Ideal para Streaming HD y Clases",
-      "Baja Latencia (Gaming básico)",
-      "Soporte Técnico Estándar",
-      "Sin plazos forzosos",
+      "Conexión Estable y Confiable",
+      "Ideal para Redes Sociales y Tareas",
+      "Streaming de Video Fluido",
+      "Soporte Técnico Local",
+      "Sin Plazos Forzosos",
     ],
     destacado: false,
     tag: "El más accesible",
   },
   {
-    nombre: "Plan Pro / Negocio",
-    velocidad: "150 Mbps",
-    precio: "$X / mes",
+    nombre: "Plan Familiar",
+    velocidad: "20 MB",
+    precio: "$350 / mes",
     icono: <Zap />,
     detalles: [
-      "Fibra Óptica 100% Simétrica",
-      "Ideal para Teletrabajo y 4K",
-      "Velocidad Giga-Ready",
-      "Soporte 24/7 Prioritario",
-      "Múltiples dispositivos a la vez",
+      "Mayor Ancho de Banda",
+      "Ideal para Streaming HD y Clases",
+      "Múltiples Dispositivos Conectados",
+      "Soporte Técnico Prioritario",
+      "Navegación Fluida sin Interrupciones",
     ],
     destacado: true,
     tag: "El más vendido",
   },
   {
-    nombre: "Plan Corporativo",
-    velocidad: "300 Mbps",
-    precio: "$X / mes",
+    nombre: "Plan Avanzado",
+    velocidad: "30 MB",
+    precio: "$450 / mes",
     icono: <Building2 />,
     detalles: [
-      "Ancho de Banda Garantizado",
-      "IP Pública Fija (Opcional)",
-      "Máxima Prioridad de Red",
+      "Máximo Rendimiento de Red",
+      "Ideal para Descargas Pesadas y Smart TVs",
+      "Videoconferencias en Alta Definición",
       "Soporte Técnico Dedicado",
-      "Ideal para Empresas y Servidores",
+      "Ideal para Hogares Conectados o Negocios",
     ],
     destacado: false,
     tag: "Máximo Rendimiento",
@@ -77,12 +77,14 @@ const Planes = () => {
             <span className="text-xs md:text-sm font-bold tracking-[0.25em] text-cyan-400 uppercase bg-cyan-950/40 px-4 py-1.5 rounded-full border border-cyan-800/30">
               Nuestros Paquetes
             </span>
-            <p className="text-slate-400 max-w-2xl mx-auto font-light"></p>
+            <p className="text-slate-200 max-w-2xl mx-auto font-normal text-base md:text-lg mt-4">
+              Elige el plan ideal para tu hogar o negocio con precios justos y
+              conectividad estable.
+            </p>
           </ScrollReveal>
         </div>
 
-        {/* ENVOLVEMOS EL BLOQUE COMPLETO AQUÍ 
-            Esto elimina el espacio gigante en blanco y mantiene la estructura intacta */}
+        {/* CONTENEDOR DEL ABANICO */}
         <ScrollReveal direction="up" delay={0.3}>
           <div
             className={
@@ -162,27 +164,27 @@ const Planes = () => {
                   <h3 className="text-2xl font-bold mb-1 text-white">
                     {plan.nombre}
                   </h3>
-                  <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-cyan-400 mb-2">
+                  <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-cyan-400 mb-2">
                     {plan.velocidad}
                   </div>
 
                   {/* Precio */}
-                  <div className="text-xl font-light text-slate-400 mb-6 font-mono">
+                  <div className="text-xl font-bold text-slate-200 mb-6 font-mono">
                     {plan.precio}
                   </div>
 
-                  {/* Detalles */}
+                  {/* Detalles optimizados para legibilidad */}
                   <ul className="w-full mb-8 space-y-4 text-left border-t border-slate-800/60 pt-6">
                     {plan.detalles.map((detalle, idx) => (
                       <li
                         key={idx}
-                        className="flex items-start gap-3 text-sm text-slate-300 leading-snug"
+                        className="flex items-start gap-3 text-sm text-slate-200 leading-snug"
                       >
                         <Check
                           size={16}
                           className={`${plan.destacado ? "text-cyan-400" : "text-blue-500"} shrink-0 mt-0.5`}
                         />
-                        <span className="font-light">{detalle}</span>
+                        <span className="font-normal">{detalle}</span>
                       </li>
                     ))}
                   </ul>

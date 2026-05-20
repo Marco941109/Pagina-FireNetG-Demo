@@ -63,7 +63,8 @@ const FaqItem = ({ question, answer, isOpen, toggleOpen }) => {
               },
             }}
           >
-            <div className="px-6 pb-6 pt-1 text-slate-400 text-xs md:text-sm leading-relaxed border-t border-slate-900/50 font-light pl-11">
+            {/* Cambiado de text-slate-400 font-light a text-slate-200 font-normal */}
+            <div className="px-6 pb-6 pt-1 text-slate-200 text-xs md:text-sm leading-relaxed border-t border-slate-900/50 font-normal pl-11">
               {answer}
             </div>
           </motion.div>
@@ -77,6 +78,21 @@ const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
+    {
+      question: "¿Qué planes de internet maneja?",
+      answer:
+        "Contamos con tres paquetes principales diseñados para tu presupuesto y necesidades: Plan Básico de 15 MB por $300 mensuales, Plan Familiar de 20 MB por $350 mensuales (nuestro paquete más vendido) y el Plan Avanzado de 30 MB por $450 mensuales. Todos nuestros servicios ofrecen una excelente estabilidad.",
+    },
+    {
+      question: "¿Puede revisar mi línea de internet?",
+      answer:
+        "¡Por supuesto! Si experimentas alguna interrupción o lentitud, puedes levantar un reporte inmediatamente con nuestro equipo técnico a través de nuestra línea directa o WhatsApp de atención. Realizaremos un diagnóstico remoto de tu módem y enlace inalámbrico para solucionar cualquier inconveniente a la brevedad.",
+    },
+    {
+      question: "¿Hasta qué lugares abarca la red de internet?",
+      answer:
+        "Nuestra base principal de operaciones se encuentra en Rayón, Chiapas, ofreciendo cobertura total en Barrio San Miguel, Barrio San Juan, Barrio Guadalupe, Barrio El Centro, Barrio Santa Cruz y Barrio San Antonio. Asimismo, contamos con cobertura en nuestros municipios vecinos: Pantepec, Solosuchiapa y Tapilula. Muy pronto habilitaremos la red en Ixhuatán y Tapalapa.",
+    },
     {
       question: "¿Qué incluye el costo de contratación e instalación?",
       answer:
@@ -97,11 +113,6 @@ const Faq = () => {
       answer:
         "No creemos en las cláusulas obligatorias ni en las penalizaciones engañosas. Nuestro servicio se maneja mediante un esquema mensual prepagado, lo que significa que puedes cancelar, pausar o cambiar de plan cuando lo decidas, sin cargos adicionales adicionales.",
     },
-    {
-      question: "¿Cómo reportar una falla técnica o interrupción del servicio?",
-      answer:
-        "Contamos con soporte técnico especializado listo para atenderte. Puedes levantar un reporte de inmediato enviando un mensaje a nuestro WhatsApp de soporte o llamando a nuestra línea de atención directa. El 90% de los incidentes menores se resuelven de forma remota en menos de una hora.",
-    },
   ];
 
   const handleToggle = (index) => {
@@ -109,7 +120,6 @@ const Faq = () => {
   };
 
   return (
-    // Asegúrate de que el id coincida exactamente con el de tu array de menuItems en el Navbar
     <section
       id="faq"
       className="w-full min-h-screen py-24 relative flex items-center justify-center overflow-hidden bg-[#070a12]"
@@ -146,7 +156,7 @@ const Faq = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-slate-400 font-light text-sm md:text-base max-w-xl mx-auto"
+            className="text-slate-200 font-normal text-sm md:text-base max-w-xl mx-auto"
           >
             Resuelve tus dudas al instante sobre nuestro servicio de internet,
             cobertura, instalación y formas de pago.
